@@ -1,0 +1,14 @@
+# PowerSync Sync Streams: which rows go down to each user's phone.
+# Privacy is enforced here AND in Supabase RLS. Both must agree.
+# Paste this into the PowerSync dashboard (instance -> Sync config) and deploy.
+# Requires the PowerSync Flutter SDK v1.16.0 or newer.
+
+config:
+  edition: 3
+
+streams:
+  # TEMPORARY: connection test only (setup guide, Step 9). Remove with the table.
+  # Each user only receives their own rows.
+  user_connection_checks:
+    auto_subscribe: true
+    query: SELECT * FROM connection_checks WHERE user_id = auth.user_id()

@@ -1,0 +1,1 @@
+{"flutter":{"platforms":{"android":{"default":{"projectId":"ojie-app","appId":"1:250838186506:android:3c60ccaaccb6c3479c3df3","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"ojie-app","configurations":{"android":"1:250838186506:android:3c60ccaaccb6c3479c3df3","ios":"1:250838186506:ios:3e2d7554f262e4f99c3df3"}}}}}}

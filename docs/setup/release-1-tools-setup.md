@@ -75,9 +75,8 @@ Buksan ang terminal sa `C:\Users\kurts\Claude\Ojie` at patakbuhin:
 - [ ] **Google Analytics:** i-on, at piliin o gumawa ng Analytics account
 - [ ] Hintaying matapos
 
-### 2.2 I-on ang Crashlytics
-- [ ] Sa kaliwang menu, pumunta sa **Run → Crashlytics** (o hanapin ang "Crashlytics")
-- [ ] Pindutin ang **Get started** o **Enable**, kung may ganitong button
+### 2.2 Crashlytics
+Walang kailangang gawin. Kusang nag-o-on ang Crashlytics kapag nagpadala ang app ng unang crash report (Step 9, Test 4).
 
 ### 2.3 I-install ang mga CLI tool
 Sa terminal:
@@ -138,27 +137,19 @@ Hindi na kailangan ng bagong project dito, kasi ang Firebase project mo ay isa n
 
 ## Step 4: PowerSync (offline sync)
 
-### 4.1 Gumawa ng database user para sa PowerSync
-- [ ] Sa Supabase dashboard, buksan ang **SQL Editor** at pindutin ang **New query**
-- [ ] I-paste ito, at **palitan ang password** ng sarili mong malakas na password. I-save din ito sa password manager.
-  ```sql
-  create role powersync_role with replication bypassrls login password 'PALITAN_ITO_NG_MALAKAS_NA_PASSWORD';
-  grant select on all tables in schema public to powersync_role;
-  alter default privileges in schema public grant select on tables to powersync_role;
-  create publication powersync for all tables;
-  ```
-- [ ] Pindutin ang **Run**. Dapat "Success" ang lumabas.
+### 4.1 Database user (hindi na kailangan)
+Kusang gumagawa ang **Connect Supabase** ng PowerSync (Step 4.3) ng sarili nitong database user. Kailangan lang na **may kahit isang table na** sa Supabase bago kumonekta. Ang publication na `powersync` ay galing sa migration ng project.
 
 ### 4.2 Gumawa ng account at instance
 - [ ] Pumunta sa **powersync.com**, pindutin ang **Sign up**, at mag-sign in gamit ang **GitHub**
-- [ ] Gumawa ng project, at sa loob nito, gumawa ng instance na pangalang **ojie-dev** (Free plan)
-- [ ] Region: piliin ang **pinakamalapit sa Singapore** na available
+- [ ] Gumawa ng project na **Ojie**. Kusa itong gagawa ng dalawang instance: **Development** (gagamitin natin ngayon) at **Production** (para sa pilot balang araw).
+- [ ] Region: **us** (ito ang pinili natin)
 
 ### 4.3 Ikonekta sa Supabase
-- [ ] Sa instance, pumunta sa **Database Connections** at piliin ang **Supabase** o **Postgres**
-- [ ] Kunin ang connection string sa Supabase: pindutin ang **Connect** sa itaas, at sundan ang sinasabi ng PowerSync kung aling klase (direct o pooler)
-- [ ] Gamitin ang username na **`powersync_role`** at ang password mula sa Step 4.1
-- [ ] Pindutin ang **Test connection**, at saka **Save**
+- [ ] Sa **Development** instance, pumunta sa **Database Connection** at pindutin ang **Connect Supabase**
+- [ ] Piliin ang Supabase project na **ojie**. Kapag "No tables detected" ang lumabas, kailangan munang mag-push ng migration na may table, at saka pindutin ang **Refresh Project**.
+- [ ] Hintaying maging **Complete** ang status
+- [ ] Pindutin ang **Configure Sync**, i-paste ang laman ng [powersync/sync-rules.yaml](../../powersync/sync-rules.yaml), at saka **Validate** at **Deploy**
 
 ### 4.4 I-on ang Supabase login sa PowerSync
 - [ ] Sa instance settings, pumunta sa **Client Auth**

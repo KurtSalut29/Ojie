@@ -1,0 +1,17 @@
+# Keep LF line endings in the repo so Windows and the Linux CI agree
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ttf binary
+*.otf binary
+*.jar binary
+*.docx binary
+*.pdf binary
+*.riv binary

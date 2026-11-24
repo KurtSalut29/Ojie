@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "250838186506",
+    "project_id": "ojie-app",
+    "storage_bucket": "ojie-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250838186506:android:3c60ccaaccb6c3479c3df3",
+        "android_client_info": {
+          "package_name": "ph.ojie.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmTduxGDUWGt-KGUR83_8AmDGVj-nNTGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
