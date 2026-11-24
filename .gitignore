@@ -1,0 +1,28 @@
+# Secrets: never commit real keys
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+key.properties
+google-services.json
+GoogleService-Info.plist
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+
+# Node (website, Supabase functions tooling)
+node_modules/
+
+# Supabase local files
+supabase/.branches/
+supabase/.temp/
+
+# Office lock files
+~$*
