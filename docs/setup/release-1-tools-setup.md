@@ -180,14 +180,14 @@ Ako muna ang gagawa ng `website/` files (landing page at privacy policy). Ikaw a
 
 Kapag handa na ang files:
 - [ ] Pumunta sa **dash.cloudflare.com** at gumawa ng account
-- [ ] Pumunta sa **Workers & Pages**, pindutin ang **Create**, at piliin ang **Pages**, saka ang **Connect to Git**
-- [ ] I-connect ang GitHub at piliin ang repo na **KurtSalut29/Ojie**
-- [ ] Build settings:
-  - Framework preset: **None**
-  - Build command: (iwanang blangko)
-  - Build output directory: `website`
-- [ ] Pindutin ang **Save and Deploy**
-- [ ] Kopyahin ang URL (halimbawa `ojie.pages.dev`)
+- [ ] Pumunta sa **Compute → Workers & Pages**, pindutin ang **Create application**, at i-import ang repo na **KurtSalut29/Ojie**
+- [ ] Build command: (iwanang blangko). Deploy command: `npx wrangler deploy`. Ang [wrangler.jsonc](../../wrangler.jsonc) ang nagsasabi na nasa `website/` folder ang site.
+- [ ] Pindutin ang **Deploy**
+
+✅ **Live na:**
+- Home: https://ojie.kurtsalut18.workers.dev/
+- Privacy Policy (para sa Play Console): https://ojie.kurtsalut18.workers.dev/privacy
+- Delete account (para sa Play Console): https://ojie.kurtsalut18.workers.dev/delete-account
 
 📩 **Sabihin kay Claude** ang URL.
 

@@ -3,6 +3,8 @@
 {
   "name": "ojie",
   "compatibility_date": "2026-11-25",
+  // Serve the site on the free ojie.<subdomain>.workers.dev URL
+  "workers_dev": true,
   "assets": {
     "directory": "./website",
     "not_found_handling": "404-page"
