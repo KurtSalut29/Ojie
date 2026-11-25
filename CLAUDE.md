@@ -4,6 +4,12 @@
 - Kurt is a solo developer. Explain things in simple Taglish, no deep words.
 - Plan first, get approval, then build. Ask before big or hard-to-undo changes.
 
+## Quality bar (approved by Kurt, applies to every feature)
+- Full rules: `docs/quality/ojie-quality-bar.md`. A feature is not done when it works; it is done when it passes all 11 pillars with evidence.
+- Design before code: build from the Ojie Design System and get Kurt's approval on mockups first. Never ship the default Material look or system fonts by accident.
+- Security means "still safe after deployment": list threats before coding, enforce on the server (RLS + sync streams), and prove it with pgTAP tests.
+- Before saying "done": tests pass, real-phone screenshots (light + dark, largest font), offline check, all states (loading/empty/error/offline), security + code review, then show the evidence.
+
 ## Stack
 - App: Flutter + Riverpod + go_router + freezed/json_serializable. Android first, then iOS.
 - Backend: Supabase (Postgres, Auth, Storage, Edge Functions). Run the CLI with `npx supabase`.
