@@ -1,0 +1,10 @@
+// Cloudflare Workers config for the Ojie website (static files only).
+// Deployed by Cloudflare on every push to main.
+{
+  "name": "ojie",
+  "compatibility_date": "2026-11-25",
+  "assets": {
+    "directory": "./website",
+    "not_found_handling": "404-page"
+  }
+}
