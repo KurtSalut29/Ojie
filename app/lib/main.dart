@@ -7,7 +7,6 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'core/config/env.dart';
 import 'core/database/database.dart';
-import 'dev/connection_test_screen.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -41,7 +40,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: 'Ojie', home: ConnectionTestScreen());
+    // Placeholder until the Release 1 screens are built.
+    return const MaterialApp(
+      title: 'Ojie',
+      home: Scaffold(body: Center(child: Text('Ojie'))),
+    );
   }
 }
 

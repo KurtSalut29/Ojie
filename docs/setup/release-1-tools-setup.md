@@ -227,3 +227,5 @@ Gagawa ako ng pansamantalang test screen. Susubukan mo ito sa phone mo:
 - [ ] **Test 4:** Pindutin ang "Test crash". Dapat lumabas ang crash sa Firebase Crashlytics (puwedeng abutin nang ilang minuto).
 
 Kapag pasado ang lahat ng apat, buburahin ko ang test screen, at **saka tayo magsisimula sa features.** 🎉
+
+✅ **Pasado ang lahat ng apat noong November 25, 2026** (Infinix X6885, Android 16). Nabura na ang test screen. Ang `connection_checks` table at ang sync stream nito ay buburahin kasabay ng unang totoong migration ng Release 1.
