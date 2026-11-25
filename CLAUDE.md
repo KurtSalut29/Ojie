@@ -24,7 +24,7 @@
 - Honest records: edited entries are always marked edited; signed weeks are locked.
 - AI never makes things up: it only uses what the student logged.
 - Every action works offline first and syncs later without double entries (use client-generated UUIDs).
-- Secrets go in `.env` only, never in Git or in the app bundle.
+- Root `.env` holds only PUBLIC app values: it is compiled into the app via `--dart-define-from-file`. Server secrets go in `supabase/functions/.env` (or Supabase secrets). Neither file goes into Git.
 
 ## Commands
 - `cd app && flutter analyze && flutter test`
