@@ -89,7 +89,11 @@ All text colors pass WCAG AA (checked).
 | inputBorder | `#9C8B79` | `#807476` |
 | text | `#241F1C` | `#F4EEE6` |
 | text2 | `#6B5E54` | `#BFB3A8` |
-| text3 | `#7A6B5E` | `#9A8E84` |
+| text3 | `#736457` | `#9A8E84` |
+| successSoft / onSuccessSoft | `#E3F1E8` / `#1F5C39` | `#1E3326` / `#9EDDB6` |
+| warningSoft / onWarningSoft | `#FBEFD9` / `#7A4800` | `#3A2E17` / `#F2C27A` |
+| dangerSoft / onDangerSoft | `#FBE3E1` / `#8C1D18` | `#3A1E1C` / `#FFB4AB` |
+| disabled / onDisabled | `#EFE6DA` / `#A3958A` | `#2B2627` / `#6E6264` |
 | primary | `#C84E14` (white text) | `#FF7A33` (text `#1A1213`) |
 | primaryPressed | `#A9420F` | `#FF9459` |
 | primaryText (links) | `#B5470F` | `#FF8A4C` |
@@ -179,7 +183,8 @@ Flutter app (Riverpod, go_router)
 - Domain rules (hours, streaks, rank, end date) are pure Dart functions with unit tests.
 - Screens get data from Riverpod providers backed by repositories. The temporary global `db` from setup moves into a provider.
 - Routing: go_router with a redirect guard based on auth state, role and coordinator status. Student and coordinator route trees are separate.
-- Packages added in Release 1: `flutter_riverpod`, `riverpod_annotation`, `go_router`, `freezed`, `json_serializable`, `intl`, `flutter_localizations`, `lucide_icons_flutter`, `flutter_local_notifications`, `timezone`, `image_picker`, `flutter_image_compress`, `connectivity_plus`, `share_plus`. (Exact package names and versions are checked against pub.dev before adding.)
+- Riverpod is used without code generation (plain providers) to keep the build simple; `freezed` and `json_serializable` still use `build_runner`.
+- Packages added in Release 1: `flutter_riverpod`, `go_router`, `freezed`, `json_serializable`, `intl`, `flutter_localizations`, `lucide_icons_flutter`, `flutter_local_notifications`, `timezone`, `image_picker`, `flutter_image_compress`, `connectivity_plus`, `share_plus`. (Exact package names and versions are checked against pub.dev before adding.)
 
 ---
 
